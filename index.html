@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SPECTRA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="chrome">
+      <div class="logo">SPECTRA <span>▸</span></div>
+      <div class="cmds">
+        <button data-cmd="hunt">Hunt Peak</button>
+        <button data-cmd="top6">Top 6</button>
+        <button data-cmd="harm">Harmonic Ladder</button>
+        <button data-cmd="ghost">Ghost 8s</button>
+        <button data-cmd="hold">Hold</button>
+        <button data-cmd="freeze">Freeze</button>
+        <button data-cmd="cinema">Cinema</button>
+        <button data-cmd="aweight">A-Weight</button>
+        <button data-cmd="sine">Sine 1k</button>
+        <button data-cmd="pink">Pink</button>
+        <button data-cmd="stopg">Gen Off</button>
+        <button type="button" id="open-pal">⌘K</button>
+      </div>
+      <div class="meta" id="meta">idle</div>
+    </header>
+
+    <div id="stage">
+      <canvas id="spec"></canvas>
+      <div id="hud">
+        <div class="tag">BEACON</div>
+        <div class="db">— dB</div>
+        <div class="sub">tap a peak · / command</div>
+      </div>
+      <div id="gate" class="gate">
+        <button id="start">Enable microphone</button>
+      </div>
+      <div id="palette">
+        <input id="pal-input" placeholder="SPECTRA ▸ hunt, ghost, cinema…" autocomplete="off" />
+        <div class="list" id="pal-list"></div>
+      </div>
+    </div>
+
+    <footer class="chrome">
+      Space freeze · H hold · C clear · P hunt · G ghost · F cinema · L harmonics · / commands · click to mark · wheel zoom · shift-wheel dB
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
